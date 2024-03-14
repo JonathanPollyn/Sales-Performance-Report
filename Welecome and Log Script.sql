@@ -1,0 +1,24 @@
+USE PollynzConsults
+GO
+
+CREATE TABLE dbo.PowerBI_Welcome_Page
+(
+WelcomeID INT IDENTITY(1,1) NOT NULL,
+ReportName VARCHAR(100) NOT NULL,
+ReportOwner VARCHAR(100) NOT NULL,
+ReportDesc VARCHAR(MAX) NOT NULL,
+PRIMARY KEY CLUSTERED
+(
+	ReportName ASC
+))
+GO
+
+CREATE TABLE dbo.PowerBI_Info_Page_log
+(
+LogID INT IDENTITY(1,1) NOT NULL,
+ReportName VARCHAR(100) NOT NULL,
+ChangeDate date NOT NULL,
+ChangeDetails VARCHAR(MAX) NOT NULL,
+AssignedDeveloper VARCHAR(255) NOT NULL
+)
+GO
